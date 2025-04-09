@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Over Fashion - Sua Loja de Roupas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="iimagens/logo da loja.jpg" alt="Logo Over Fashion">
+            <h1>Over Fashion</h1>
+        </div>
+        <nav>
+            <button data-categoria="acessorios">Acessórios</button>
+            <button data-categoria="blusas">Blusas</button>
+            <button data-categoria="calcas">Calças</button>
+            <button data-categoria="saias">Saias</button>
+            <button data-categoria="todos">Todos</button>
+            <button data-categoria="vestidos">Vestidos</button>
+        </nav>
+        <div class="busca-filtros">
+            <input type="text" id="campo-busca" placeholder="Buscar roupas...">
+            <select id="filtro-preco">
+                <option value="todos">Todos os preços</option>
+                <option value="menor-50">Menos de R$ 50</option>
+                <option value="50-100">R$ 50 - R$ 100</option>
+                <option value="maior-100">Mais de R$ 100</option>
+            </select>
+            <button id="botao-busca">Buscar</button>
+        </div>
+        <button id="icone-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button>
+    </header>
+
+    <main>
+        <section id="banner">
+            <div class="banner-item">
+                <img src="iimagens/dd.webp" alt="Banner Over Fashion">
+            </div>
+        </section>
+
+        <section class="roupas">
+            <div class="roupa-item" data-categoria="blusas" data-index="0">
+                <img src="iimagens/camisa.jpg" alt="Blusa Estampada">
+                <h3>Blusa Estampada</h3>
+                <p class="preco">R$ 49,99</p>
+                <p class="detalhes">
+                    Blusa estampada com tecido leve e confortável.
+                    Ideal para looks casuais e despojados.
+                </p>
+                <button class="detalhes-produto">Detalhes</button>
+                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            </div>
+            <div class="roupa-item" data-categoria="calcas" data-index="1">
+                <img src="iimagens/calça.jpg" alt="Calça Jeans">
+                <h3>Calça Jeans</h3>
+                <p class="preco">R$ 89,99</p>
+                <p class="detalhes">
+                    Calça jeans com modelagem moderna e confortável.
+                    Perfeita para o dia a dia e para ocasiões especiais.
+                </p>
+                <button class="detalhes-produto">Detalhes</button>
+                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            </div>
+            <div class="roupa-item" data-categoria="vestidos" data-index="2">
+                <img src="iimagens/vestido1.jpg" alt="Vestido Floral">
+                <h3>Vestido Floral</h3>
+                <p class="preco">R$ 129,99</p>
+                <p class="detalhes">
+                    Vestido floral com tecido leve e fluido.
+                    Ideal para eventos e ocasiões especiais.
+                </p>
+                <button class="detalhes-produto">Detalhes</button>
+                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            </div>
+            <div class="roupa-item" data-categoria="saias" data-index="3">
+                <img src="iimagens/saia1.jpg" alt="Saia Midi">
+                <h3>Saia Midi</h3>
+                <p class="preco">R$ 79,99</p>
+                <p class="detalhes">
+                    Saia midi com tecido leve e confortável.
+                    Ideal para looks casuais e elegantes.
+                </p>
+                <button class="detalhes-produto">Detalhes</button>
+                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            </div>
+            <div class="roupa-item" data-categoria="acessorios" data-index="4">
+                <img src="iimagens/acessorio1.jpg" alt="Colar Dourado">
+                <h3>Colar Dourado</h3>
+                <p class="preco">R$ 39,99</p>
+                <p class="detalhes">
+                    Colar dourado com design moderno e elegante.
+                    Perfeito para complementar looks diversos.
+                </p>
+                <button class="detalhes-produto">Detalhes</button>
+                <button class="adicionar-carrinho">Adicionar ao carrinho</button>
+            </div>
+        </section>
+
+        <aside id="carrinho">
+            <button id="fechar-carrinho">×</button>
+            <h2>Carrinho de Compras</h2>
+            <ul id="lista-carrinho"></ul>
+            <p id="total">Total: R$ 0,00</p>
+            <button id="finalizar-compra">Finalizar Compra</button>
+            <a href="contato.html" class="contato-link">Contato</a>
+            <div id="qrcode-container"></div>
+        </aside>
+
+        <div id="detalhes-produto" style="display: none;">
+            <button id="fechar-detalhes">×</button>
+            <h2 id="nome-produto-detalhe"></h2>
+            <p id="preco-produto-detalhe"></p>
+            <div id="opcoes-produto"></div>
+            <div id="pagamento-produto"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="depoimentos">
+            <h2>Depoimentos</h2>
+            <div class="depoimento-item">
+                <p>"Adorei a qualidade das roupas e o atendimento da loja!"</p>
+                <p>- Maria Silva</p>
+            </div>
+            <div class="depoimento-item">
+                <p>"A entrega foi super rápida e os produtos são ótimos!"</p>
+                <p>- João Pereira</p>
+            </div>
+        </div>
+        <div class="contato-rodape">
+            <h2>Contato</h2>
+            <p><i class="fas fa-phone"></i> (XX) XXXX-XXXX</p>
+            <p><i class="fas fa-envelope"></i> contato@overfashion.com</p>
+            <div class="redes-sociais">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

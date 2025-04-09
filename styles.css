@@ -1,0 +1,391 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #d4af37;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2);
+    transition: box-shadow 0.3s ease;
+    position: sticky; /* Fixa o cabeçalho no topo */
+    top: 0;
+    z-index: 100; /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-height: 80px;
+    margin-right: 20px;
+    filter: drop-shadow(2px 2px 4px rgba(212, 175, 55, 0.5));
+    transition: filter 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+nav button {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+}
+
+nav button:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+.busca-filtros {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#campo-busca, #filtro-preco, #botao-busca {
+    padding: 10px;
+    margin-right: 12px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #d4af37;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(212, 175, 55, 0.2);
+}
+
+#campo-busca:focus, #filtro-preco:focus {
+    border-color: #d4af37;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.4);
+}
+
+#botao-busca {
+    background-color: #d4af37;
+    color: #000;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+}
+
+#botao-busca:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+#icone-carrinho {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+    position: relative; /* Permite posicionar o contador do carrinho */
+}
+
+#icone-carrinho:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+#contador-carrinho {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4500; /* Cor vermelha para o contador */
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+main {
+    padding: 20px;
+}
+
+#banner {
+    margin-bottom: 30px;
+}
+
+.banner-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; /* Transição suave para a imagem do banner */
+}
+
+.banner-item img:hover {
+    transform: scale(1.05); /* Efeito de zoom na imagem do banner */
+}
+
+.roupas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.roupa-item {
+    background-color: #282828;
+    border: 1px solid #444;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.roupa-item:hover {
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.2);
+    transform: scale(1.05);
+}
+
+.roupa-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Transição suave para as imagens das roupas */
+}
+
+.roupa-item img:hover {
+    transform: scale(1.05); /* Efeito de zoom nas imagens das roupas */
+}
+
+.roupa-item h3 {
+    margin: 10px 0;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+.roupa-item:hover h3 {
+    color: #b89532;
+}
+
+.roupa-item .preco {
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.roupa-item:hover .preco {
+    color: #1e8449;
+}
+
+.roupa-item button.detalhes-produto,
+.roupa-item button.adicionar-carrinho {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+}
+
+.roupa-item button.detalhes-produto:hover,
+.roupa-item button.adicionar-carrinho:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+#carrinho {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.1);
+    display: none;
+    transition: transform 0.3s ease;
+    z-index: 101; /* Garante que o carrinho esteja acima do cabeçalho */
+}
+
+
+#carrinho.ativo {
+    display: block;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#fechar-carrinho {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+#fechar-carrinho:hover {
+    color: #b89532;
+}
+
+#lista-carrinho {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    color: #d4af37;
+    transition: background-color 0.3s ease;
+}
+
+#lista-carrinho li:hover {
+    background-color: #333;
+}
+
+#total {
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: right;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+#total:hover {
+    color: #b89532;
+}
+
+#finalizar-compra {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+}
+
+#finalizar-compra:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+.contato-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+.contato-link:hover {
+    color: #b89532;
+}
+
+#detalhes-produto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.1);
+    display: none;
+    transition: transform 0.3s ease;
+}
+
+#detalhes-produto.ativo {
+    display: block;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+#fechar-detalhes {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+#fechar-detalhes:hover {
+    color: #b89532;
+}
+
+footer {
+    background-color: #282828;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: #d4af37;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #333;
+}
+
+.depoimentos, .contato-rodape {
+    width: 45%;
+    min-width: 300px;
+}
+
+.redes-sociais a {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: #b89532;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .depoimentos, .contato-rodape {
+        width: 100%;
+    }
+}
