@@ -13,25 +13,30 @@
             <img src="iimagens/logo da loja.jpg" alt="Logo Over Fashion">
             <h1>Over Fashion</h1>
         </div>
-        <nav>
-            <button data-categoria="acessorios">Acessórios</button>
-            <button data-categoria="blusas">Blusas</button>
-            <button data-categoria="calcas">Calças</button>
-            <button data-categoria="saias">Saias</button>
-            <button data-categoria="todos">Todos</button>
-            <button data-categoria="vestidos">Vestidos</button>
-        </nav>
-        <div class="busca-filtros">
-            <input type="text" id="campo-busca" placeholder="Buscar roupas...">
-            <select id="filtro-preco">
-                <option value="todos">Todos os preços</option>
-                <option value="menor-50">Menos de R$ 50</option>
-                <option value="50-100">R$ 50 - R$ 100</option>
-                <option value="maior-100">Mais de R$ 100</option>
-            </select>
-            <button id="botao-busca">Buscar</button>
+        <div class="menu-busca-carrinho">
+            <div class="menu-categorias">
+                <button id="botao-menu-categorias" class="menu-hamburguer">☰</button>
+                <nav class="categorias">
+                    <button data-categoria="todos">Todos</button>
+                    <button data-categoria="acessorios">Acessórios</button>
+                    <button data-categoria="blusas">Blusas</button>
+                    <button data-categoria="calcas">Calças</button>
+                    <button data-categoria="saias">Saias</button>
+                    <button data-categoria="vestidos">Vestidos</button>
+                </nav>
+            </div>
+            <div class="busca-filtros">
+                <input type="text" id="campo-busca" placeholder="Buscar roupas...">
+                <select id="filtro-preco">
+                    <option value="todos">Todos os preços</option>
+                    <option value="menor-50">Menos de R$ 50</option>
+                    <option value="50-100">R$ 50 - R$ 100</option>
+                    <option value="maior-100">Mais de R$ 100</option>
+                </select>
+                <button id="botao-busca">Buscar</button>
+            </div>
+            <button id="icone-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button>
         </div>
-        <button id="icone-carrinho">Carrinho (<span id="contador-carrinho">0</span>)</button>
     </header>
 
     <main>
