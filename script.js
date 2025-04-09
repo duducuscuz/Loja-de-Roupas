@@ -260,3 +260,9 @@ botoesCategoria.forEach(botao => {
 });
 
 
+const botaoMenuCategorias = document.getElementById('botao-menu-categorias');
+const menuCategorias = document.querySelector('.categorias');
+
+botaoMenuCategorias.addEventListener('click', () => {
+    menuCategorias.classList.toggle('ativo');
+});
