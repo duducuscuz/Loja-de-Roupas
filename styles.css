@@ -389,3 +389,165 @@ footer:hover {
         width: 100%;
     }
 }
+
+.menu-categorias {
+    position: relative;
+}
+
+.menu-hamburguer {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #d4af37;
+    transition: color 0.3s ease;
+}
+
+.menu-hamburguer:hover {
+    color: #b89532;
+}
+
+.categorias {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #282828;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.categorias.ativo {
+    display: flex;
+}
+
+.categorias button {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+}
+
+.categorias button:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+.menu-busca-carrinho {
+    display: flex;
+    align-items: center;
+}
+
+.menu-categorias {
+    position: relative;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-hamburguer {
+    background: none;
+    border: none;
+    font-size: 1.7em;
+    cursor: pointer;
+    color: #d4af37;
+    transition: color 0.3s ease;
+    padding: 8px;
+    align-self: center; /* Adicionado para alinhar o botão "hambúrguer" verticalmente */
+}
+
+.menu-hamburguer:hover {
+    color: #b89532;
+}
+
+.categorias {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #282828;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.categorias.ativo {
+    display: flex;
+}
+
+.categorias button {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+}
+
+.categorias button:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+.busca-filtros {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#icone-carrinho {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-self: center; /* Adicionado para alinhar o botão do carrinho verticalmente */
+}
+
+#icone-carrinho:hover {
+    background-color: #b89532;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.5);
+}
+
+#contador-carrinho {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4500;
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 0.8em;
+}
+
+.menu-hamburguer {
+    /* ... outros estilos ... */
+    margin-top: -30px; /* Ajuste este valor conforme necessário */
+}
+
+#icone-carrinho {
+    /* ... outros estilos ... */
+    margin-top: -20px; /* Ajuste este valor conforme necessário */
+}
